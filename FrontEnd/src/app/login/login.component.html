@@ -1,0 +1,14 @@
+<form [formGroup]="formGroup" #form="ngForm" class="form">
+    <mat-form-field class="with-100">
+        <mat-label>Email</mat-label>
+        <input matInput [formControlName]="'email'" >
+        <mat-error *ngIf="formGroup.get('email').hasError('required')">
+            Este campo es requerido    
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field class="with-100">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [formControlName]="'password'">
+    </mat-form-field>   
+</form>
+<div class="content-button"><button mat-raised-button color="primary" (click)="Loguear()" [disabled]="!form.valid">Ingresar</button></div> 

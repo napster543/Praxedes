@@ -1,0 +1,10 @@
+img.avinal{
+    max-width: 100%;
+    height: auto;
+    width: 82%;
+}
+
+.PositionRight{
+    position: absolute;
+    right: 20px;
+}

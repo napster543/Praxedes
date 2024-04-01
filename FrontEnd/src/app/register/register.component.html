@@ -1,0 +1,21 @@
+<form [formGroup]="formGroup" #form="ngForm" class="form">
+    <mat-form-field class="with-100">
+        <mat-label>Email</mat-label>
+        <input matInput [formControlName]="'email'" >
+        <mat-error *ngIf="formGroup.get('email').hasError('required')">
+            Este campo es requerido    
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field class="with-100">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [formControlName]="'pass'">
+    </mat-form-field>
+    <mat-form-field class="with-100">
+        <mat-label>Nombre</mat-label>
+        <input matInput [formControlName]="'nombre'">
+        <mat-error *ngIf="formGroup.get('nombre').hasError('required')">
+            Este campo es requerido    
+          </mat-error>
+    </mat-form-field>
+</form>
+<div class="content-button"><button mat-raised-button color="primary" (click)="Registrar()" [disabled]="!form.valid">Guardar</button></div> 
